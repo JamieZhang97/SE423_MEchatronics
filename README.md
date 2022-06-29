@@ -1,1 +1,1 @@
-# SE423_MEchatronics
+# SE423_Mechatronics
