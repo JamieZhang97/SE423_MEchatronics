@@ -1,0 +1,103 @@
+switch(state) {
+	case 1: // No money
+		Display 0 cents on Soda Machine
+		if (coin == 5) { // if statements to decide want to do next time into switch statements
+			state = 2;
+		}
+		if (coin == 10) {
+			state = 3;
+		}
+		if (coin == 25) {
+			state = 6;
+		}
+		break;
+		
+	case 2: // 5 cents deposited
+		Display 5 cents on Soda Machine
+		if (coin == 5) { 
+			state = 3;
+		}
+		if (coin == 10) {
+			state = 4;
+		}
+		if (coin == 25) {
+			state = 7;
+		}
+
+	case 3: // 10 cents deposited
+		Display 10 cents on Soda Machine
+		if (coin == 5) { 
+			state = 4;
+		}
+		if (coin == 10) {
+			state = 5;
+		}
+		if (coin == 25) {
+			state = 8;
+		}
+
+	case 4: // 15 cents deposited
+		Display 15 cents on Soda Machine
+		if (coin == 5) { 
+			state = 5;
+		}
+		if (coin == 10) {
+			state = 6;
+		}
+		if (coin == 25) {
+			state = 9;
+		}
+		
+	case 5: // 20 cents deposited
+		Display 20 cents on Soda Machine
+		if (coin == 5) { 
+			state = 6;
+		}
+		if (coin == 10) {
+			state = 7;
+		}
+		if (coin == 25) {
+			reject coin;
+		}
+		
+	case 6: // 25 cents deposited
+		Display 25 cents on Soda Machine
+		if (coin == 5) { 
+			state = 7;
+		}
+		if (coin == 10) {
+			state = 8;
+		}
+		if (coin == 25) {
+			reject coin;
+		}		
+		
+	case 7: // 30 cents deposited
+		Display 30 cents on Soda Machine		
+		if (coin == 5) { 
+			state = 8;
+		}
+		if (coin == 10) {
+			state = 9;
+		}
+		if (coin == 25) {
+			reject coin;
+		}
+		
+	case 8: // 35 cents deposited
+		Display 35 cents on Soda Machine		
+		if (coin == 5) { 
+			state = 9;
+		}
+		if (coin == 10) {
+			state = 6;
+		}
+		if (coin == 25) {
+			reject coin;
+		}
+		
+	case 9: // 40 cents deposited
+		Dispense Soda
+		state = 0;
+		break;
+}
